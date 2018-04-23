@@ -5,9 +5,8 @@ const productSchema = new Schema(
   {
  name: String,
  description: String,
- colection: {type: String, enum:["Stranger Things","Narcos"]},
  price: Number,
- material: {type: String, enum:["Silicone","Hard plastic"]},
+ image: String
   },
   {
     timestamps: {

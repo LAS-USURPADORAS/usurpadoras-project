@@ -1,16 +1,38 @@
 module.exports = [
-  {name: "Stranger Things logo",
-  description: "Wonderful",
-  colection: "Stranger Things",
-  price: 5,
-  material: "Silicone" 
+  {name: "Pasion de Gavilanes",
+  description: "",
+  price: 15,
+  image: 
 },
   {
-    name: "Narcos logo",
+    name: "La Usurpadora",
     description: "Wonderful",
-    colection: "Narcos",
-    price: 5,
-    material: "Hard plastic" 
+    price: 15,
+    image: 
   },
+  {
+    name: "Rubi",
+    description: ,
+    price: 15,
+    image: 
+  },
+  {
+    name: "Maria la del Barrio",
+    description: ,
+    price: 15,
+    image: 
+  },
+  {
+    name: "Pobre Diabla" ,
+    description: ,
+    price: 15,
+    image: 
+  },
+  {
+    name: "Amarte asi Frijolito",
+    description: ,
+    price: 15,
+    image: 
+  }
   
 ]

@@ -11,7 +11,8 @@ mongoose.connect(dbURL).then( () => {
 
   Product.create(productData)
   
-    .then( () => {
+    .then( (p) => {
+      console.log(p)
       mongoose.disconnect();
     })
 })

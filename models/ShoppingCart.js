@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema(
+const shoppingCartSchema = new Schema(
   {
-    username: String,
-    password: String,
-    email: String
+content: Array
   },
   {
     timestamps: {
@@ -15,5 +13,5 @@ const userSchema = new Schema(
   }
 );
 
-const User = mongoose.model("User", userSchema);
-module.exports = User;
+const ShoppingCart = mongoose.model("shoppingCart", shoppingCartSchema);
+module.exports = ShoppingCart;

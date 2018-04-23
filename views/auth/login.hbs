@@ -1,14 +1,14 @@
 
-<h2>Login</h2>
+<h2>Inisio de sesión</h2>
 
 <form action="/auth/login" method="POST" id="form-container">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
+  <label for="username">Nombre</label>
+  <input id="username" type="text" name="username" placeholder="Mínimo 2 nombres">
 
   <br><br>
 
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
+  <label for="password">Contraseña</label>
+  <input id="password" type="password" name="password" placeholder="Que no le vean mijo">
   <br>
   {{#if message }}
     <div class="error-message">{{ message }}</div>
@@ -16,10 +16,11 @@
 
   <br><br>
 
-  <button>Login</button>
+  <button>Inisiar sesión</button>
 
   <p class="account-message">
-    Don't have an account yet?
-    <a href="/auth/login">Signup</a>
+    Que no tiene cuenta? Pues regístrese pendejo
+    <a href="/auth/signup">Regístreme</a>
+    <a href="/">Vuelve a la home careverga</a>
   </p>
 </form>

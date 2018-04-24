@@ -3,6 +3,13 @@
 
 {{#if user}}
 {{#each carrito}}
+<ul> 
+    <li> 
 {{this.name}}
+<a href="/delete/{{this._id}}"> Delete </a>
+</li>
+</ul>
 {{/each}}
 {{/if}}
+
+<a href="/"> Lleváme a casa </a>

@@ -1,5 +1,14 @@
 <h1>{{name}}</h1>
-  <img src="{{image}}">
-  <p >{{price}}</p>
-  <p >{{description}}</p>
-  <a href="/cart">Cómpremela señito</a>
+<img src="{{image}}">
+<p>{{price}}</p>
+<p>{{description}}</p>
+
+
+{{#if user}}
+<a href="/cart">Cómpremela señito</a>
+{{else}}
+<p>Necesitas estar registrado para comprar</p>
+<a href="/auth/login">Inisie Sesión</a>
+<a href="/auth/signup">Regístrese Parcero</a>
+
+{{/if}}

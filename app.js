@@ -70,6 +70,15 @@ hbs.registerHelper("ifUndefined", (value, options) => {
   }
 });
 
+app.use((req, res, next) => {
+  if (req.user) {
+    app.locals.user = req.user;
+  } else {
+    app.locals.user = null;
+  }
+  next();
+ });
+
 // default value for title local
 app.locals.title = "Express - Generated with IronGenerator";
 

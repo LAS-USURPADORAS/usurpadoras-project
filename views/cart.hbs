@@ -1,2 +1,8 @@
 <h1>ESTE ES EL CARRITO MUGROSO</h1>
 <a href="/catalog">Siga gastando pesitos</a>
+
+{{#if user}}
+{{#each carrito}}
+{{this.name}}
+{{/each}}
+{{/if}}

@@ -2,7 +2,8 @@ const express = require('express');
 const router  = express.Router();
 const Product = require("../models/Product");
 const ensureLoggedIn = require('../middlewares/ensureLoggedIn')
-
+const ShoppingCart = require("../models/ShoppingCart")
+const User = require("../models/User");
 
 
 /* GET home page */
@@ -39,5 +40,19 @@ router.get("/product/:id",  (req, res, next) => {
 router.get('/cart', (req, res, next) => {
   res.render('cart');
 });
+
+router.get("/add/:id", (req, res, next) => {
+  Product.findById(req.params.id)
+  .then(p => {
+    User.findByIdAndUpdate(req.session.passport.user)
+    .then(u =>  {u.cart.push(p)
+      u.save()
+      res.render('cart', {carrito:u.cart})
+    console.log(u)
+  })
+  
+  })
+  
+})
 
 module.exports = router;

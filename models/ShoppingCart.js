@@ -3,7 +3,11 @@ const Schema = mongoose.Schema;
 
 const shoppingCartSchema = new Schema(
   {
-content: Array
+    userId: String,
+    content: Array,
+    productId: String,
+    productQ: Number,
+    productPrice: Number
   },
   {
     timestamps: {

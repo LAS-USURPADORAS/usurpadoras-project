@@ -1,7 +1,17 @@
 <h1>PASIÓN ENTRE ALGODONES</h1>
+ {{#if user}}
+ <p> Órale {{user.username}} </p>
+ {{else}}
 <p>Bienvenidos mijitos</p>
+{{/if}}
 
+{{#if user}}
+<a href="/catalog">Sobre joyias</a>
+<a href="/about">Sobre nosotras</a>
+<a href="/auth/logout"> Logout </a>
+{{else}}
 <a href="/auth/login">Inisie Sesión</a>
 <a href="/auth/signup">Regístrese Parcero</a>
 <a href="/catalog">Sobre joyias</a>
 <a href="/about">Sobre nosotras</a>
+{{/if}}

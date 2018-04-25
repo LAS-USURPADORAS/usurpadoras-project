@@ -3,9 +3,12 @@
 <p>{{price}}</p>
 <p>{{description}}</p>
 
-
 {{#if user}}
-<a href="/add/{{id}}">Cómpremela señito</a>
+<form action="/add/{{id}}" method="POST">
+<input type="number" name="quantity" id="quantity">
+<button>Cómpremela señito</button>
+</form>
+{{!-- <a href="/add/{{id}}">Cómpremela señito</a> --}}
 
 {{else}}
 <p>Necesitas estar registrado para comprar</p>

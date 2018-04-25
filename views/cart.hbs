@@ -6,10 +6,15 @@
 <ul> 
     <li> 
 {{this.name}}
+${{this.price}}
+Cantidad {{this.quantity}}
 <a href="/delete/{{this._id}}"> Delete </a>
 </li>
 </ul>
 {{/each}}
+
+Pesitos totales: ${{sum}}
+<a href="/pay">Comprar ahorita</a>
 {{/if}}
 
-<a href="/"> Lleváme a la home </a>
+<a href="/"> Al inisio </a>

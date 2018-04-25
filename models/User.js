@@ -7,7 +7,7 @@ const userSchema = new Schema(
     username: String,
     password: String,
     email: String,
-    cart: Array
+    cart: Array, 
   },
   {
     timestamps: {

@@ -48,14 +48,16 @@ router.get("/cart", (req, res, next) => {
 });
 
 router.get("/add/:id", (req, res, next) => {
-  Product.findById(req.params.id).then(p => {
+  Product.findById(req.params.id)
+  .then(p => {
     User.findByIdAndUpdate(req.session.passport.user).then(u => {
       u.cart.push(p);
       u.save();
       res.redirect("/cart");
       console.log(u);
     });
-  });
+  })
+  .catch(err=>console.log(err))
 });
 
 //ESTO FUNCIONA A MEDIAS, BORRA EL ULTIMO ITEM AÑADIDO

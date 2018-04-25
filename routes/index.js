@@ -75,7 +75,6 @@ router.get("/add/:id", (req, res, next) => {
 // PROPUESTA DE JUAN GANADOR
 
 router.get("/delete/:id", (req, res, next) => {
-  //console.log(req.params.id);
   User.findById(req.user.id).then(u => {
     u.cart.forEach((e, i) => {
       console.log(i, e);

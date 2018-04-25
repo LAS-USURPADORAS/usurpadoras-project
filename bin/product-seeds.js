@@ -6,6 +6,7 @@ const productData = require("./product-data.js");
 
 const dbURL = process.env.DBURL;
 
+
 mongoose.connect(dbURL).then( () => {
 //  Product.collection.drop();
 
@@ -17,6 +18,9 @@ mongoose.connect(dbURL).then( () => {
     })
 })
 
+// Product.remove({}, function(err) { 
+//   console.log('collection removed') 
+// });
 
 
 

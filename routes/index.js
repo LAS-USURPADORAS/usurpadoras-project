@@ -38,23 +38,31 @@ router.get("/product/:id", (req, res, next) => {
 });
 /*CARRITO*/
 router.get("/cart", (req, res, next) => {
+  let sum = 0;
   User.findById(req.session.passport.user)
     .then(u => {
-      res.render("cart", { carrito: u.cart });
+      u.cart.forEach((x)=>{
+        sum +=x.price*x.quantity
+      })
+      res.render("cart", { carrito: u.cart,sum });
     })
     .catch(err => {
       next();
     });
 });
+/*AÑADIR AL CARRITO*/
+router.post("/add/:id/", (req, res, next) => {
 
-router.get("/add/:id", (req, res, next) => {
+  const qnt =req.body.quantity
+console.log(qnt + "HOLAAAAAAAA")
   Product.findById(req.params.id)
   .then(p => {
+    p.quantity=qnt
     User.findByIdAndUpdate(req.session.passport.user).then(u => {
       u.cart.push(p);
       u.save();
       res.redirect("/cart");
-      console.log(u);
+      // console.log(u);
     });
   })
   .catch(err=>console.log(err))
@@ -74,7 +82,7 @@ router.get("/add/:id", (req, res, next) => {
 
 //   })
 
-// PROPUESTA DE JUAN GANADOR
+/*BORRAR DEL CARRITO*/
 
 router.get("/delete/:id", (req, res, next) => {
   //console.log(req.params.id);
@@ -88,6 +96,28 @@ router.get("/delete/:id", (req, res, next) => {
     u.save();
     res.redirect("/cart");
   });
+});
+
+router.get("/buy/:id", (req, res, next) => {
+  
+  const update = {
+    cart:[]
+  }
+
+  User.findByIdAndUpdate(req.params.id,update).then(u => {
+    res.redirect("/confirmation");
+  });
+});
+/* PÁGINAS DE PAGO*/
+
+
+
+router.get("/pay", (req, res, next) => {
+  res.render("pay", { user: req.user });
+});
+
+router.get("/confirmation", (req, res, next) => {
+  res.render("confirmation", { user: req.user });
 });
 
 module.exports = router;

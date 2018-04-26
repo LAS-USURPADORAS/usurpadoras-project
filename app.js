@@ -14,6 +14,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const flash = require("connect-flash");
 
+
 mongoose.Promise = Promise;
 mongoose
   .connect(dbURL, { useMongoClient: true })
@@ -44,6 +45,7 @@ app.use(
     store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
 );
+
 require("./passport")(app);
 
 // Express View engine setup

@@ -1,9 +1,11 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font-size: 17px;
+  font-family: 'Lobster', cursive;
+  background-image: url("https://media.giphy.com/media/QyqWKAi9WPc5O/giphy.gif"); }
 
 a {
-  color: #00B7FF; }
+  color: greenyellow; }
 
 .name {
   height: 75px;
@@ -16,7 +18,8 @@ a {
   color: fuchsia;
   background-color: transparent;
   background-image: none;
-  border-color: pink; }
+  border-color: pink;
+  border-radius: 15px; }
 
 .btn-outline-success:hover {
   color: red;
@@ -49,10 +52,38 @@ a {
   padding: 18rem; }
 
 .navbar {
-  padding: 60px; }
+  padding: 60px;
+  border-radius: 15px; }
 
 #map {
   height: 500px;
   width: 100%; }
+
+.title {
+  font-size: 60px; }
+
+.mapita {
+  margin-top: 25px; }
+
+.nav-link img {
+  height: 15px;
+  width: 15px; }
+
+.cuenta {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px; }
+
+.btn-primary {
+  background-color: fuchsia;
+  color: white; }
+
+.guadalup {
+  float: right;
+  height: 500px; }
+
+.bendision {
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */

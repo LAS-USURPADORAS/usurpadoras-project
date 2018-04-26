@@ -1,8 +1,11 @@
 <h1>ESTE ES EL CARRITO MUGROSO</h1>
 <a href="/catalog">Siga gastando pesitos</a>
+<br>
+<a href="/"> Al inisio </a>
 
 {{#if user}}
 {{#each carrito}}
+<div class="cuenta">
 <ul> 
     <li> 
 {{this.name}}
@@ -15,6 +18,8 @@ Cantidad {{this.quantity}}
 
 Pesitos totales: ${{sum}}
 <a href="/pay">Comprar ahorita</a>
+</div>
 {{/if}}
 
-<a href="/"> Al inisio </a>
+
+<img src="http://res.cloudinary.com/dhxxqnbqa/image/upload/v1524765882/imagencarrocompra.png" alt="">

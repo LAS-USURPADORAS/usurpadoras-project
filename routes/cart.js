@@ -97,7 +97,7 @@ console.log(uzuario)
   })
     .then(info => console.log(info))
     .catch(err => console.log(err))
-  res.redirect("/catalog");
+  res.render("confirmation");
 });
 
 

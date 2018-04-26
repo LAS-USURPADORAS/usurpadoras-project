@@ -31,12 +31,11 @@
 <h1></h1>
 </div>
 {{#if user}}
-<p> Órale {{user.username}} </p>
+<h3> ¡¡¡ Órale {{user.username}} !!! </h3>
 {{else}}
-<p>Bienvenidos mijitos</p>
+<h3>Bienvenidos mijitos</h3>
 {{/if}}
-
-  <h1>PASIÓN ENTRE ALGODONES</h1>
+  <h1 class="title">PASIÓN ENTRE ALGODONES</h1>
  <h5>Nuestros bellos productos</h5>
   <a href="/catalog" class="btn btn-primary">JOYIAS</a>
  </div>
@@ -47,5 +46,10 @@
 
 </div>
 </div>
- <div id="map"></div>
+ <div class="mapita" id="map"></div>
 
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk4w3eKpZ9QAPmbxQTqXJQkxkKe7rqm54">
+    </script>
+<script src='/javascripts/script.js'></script>

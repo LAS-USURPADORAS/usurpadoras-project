@@ -8,7 +8,7 @@ const dbURL = process.env.DBURL;
 
 
 mongoose.connect(dbURL).then( () => {
-//  Product.collection.drop();
+
 
   Product.create(productData)
   
@@ -17,10 +17,6 @@ mongoose.connect(dbURL).then( () => {
       mongoose.disconnect();
     })
 })
-
-// Product.remove({}, function(err) { 
-//   console.log('collection removed') 
-// });
 
 
 

@@ -94,4 +94,11 @@ app.use("/", index);
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 
+const productRoutes = require("./routes/product");
+app.use("/", productRoutes);
+
+
+const cartRoutes = require("./routes/cart");
+app.use("/", cartRoutes);
+
 module.exports = app;

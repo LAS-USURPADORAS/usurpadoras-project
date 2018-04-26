@@ -5,4 +5,27 @@ body {
 a {
   color: #00B7FF; }
 
+.name {
+  height: 75px;
+  width: 100%; }
+
+.bg-light {
+  background-color: white !important; }
+
+.btn-outline-success {
+  color: fuchsia;
+  background-color: transparent;
+  background-image: none;
+  border-color: pink; }
+
+.btn-outline-success:hover {
+  color: red;
+  background-color: pink; }
+
+.pasion {
+  height: 500px;
+  width: 100%;
+  text-align: center;
+  padding-top: 150px; }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,61 @@
-<h1>HOLA</h1>
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">LAS JOYIAS DE LA CORONA</a>
+  <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="/cart">Consulte su carromato</a>
+    <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="/">Vuelve a la home ninio</a>
+    
 
-<div class="product-container">
-{{#each product }} 
-<h4>{{name}}</h4>
-<h4>{{description}}</h4>
-<h4>{{price}}</h4>
+</nav>
 
-<img src="{{image}}">
-<a href="/product/{{id}}">Véalo mejor</a>
-{{/each}}
-<br>
-<br>
-<a href="/">a la home ninio</a>
+
+
+
+
+{{!-- 
+<ul class="nav justify-content-end">
+    <div> <h1>LAS JOYIAS DE LA CORONA</h1></div>
+  <li class="nav-item">
+    <a class="nav-link" href="/">Vuelve a la home ninio</a>
+  </li>
+  </ul>
+
+
+<div> <h1>LAS JOYIAS DE LA CORONA</h1>
+<a href="/">Vuelve a la home ninio</a>
 </div>
+ --}}
+<div class="container">
+    <div class="row">
+        {{#each product }}
+        <div class="col-md-4 card">
+            <div class="name">
+                <h2>{{name}}</h2>
+            </div>
+            <div class="name">
+                <p>{{description}}</p>
+            </div>
+            <div>
+                <img class="img-fluid" src="{{image}}">
+            </div>
+            <h3>${{price}}</h3>
+            <a href="/product/{{id}}">Véalo mejor</a>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+
+{{!-- {{#each product }}
+<div class="card">
+    <div class="card-body">
+        <h2>{{name}}</h2>
+        <h4>{{description}}</h4>
+        <h3>{{price}}</h3>
+
+        <img class="card-img-top beer-img d-block image" src="{{image}}">
+        <a href="/product/{{id}}">Véalo mejor</a>
+    </div>
+</div>
+{{/each}} --}}
+<br>
+<br>
+<a href="/">Vuelve a la home ninio</a>

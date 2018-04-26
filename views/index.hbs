@@ -1,18 +1,43 @@
+{{#if user}}
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link" href="/about">Sobre nosotras</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/auth/logout">Logout</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/cart">Su carromato</a>
+  </li>
+</ul>
+{{else}}
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="/auth/login">Inisie Sesión</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/auth/signup">Regístrese Parcero</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/about">Sobre nosotras</a>
+</ul>
+{{/if}}
+
+<div class="pasion">
+  <div>
 <h1>PASIÓN ENTRE ALGODONES</h1>
- {{#if user}}
- <p> Órale {{user.username}} </p>
- {{else}}
+</div>
+{{#if user}}
+<p> Órale {{user.username}} </p>
+{{else}}
 <p>Bienvenidos mijitos</p>
 {{/if}}
 
-{{#if user}}
-<a href="/catalog">Sobre joyias</a>
-<a href="/about">Sobre nosotras</a>
-<a href="/auth/logout"> Logout </a>
-<a href="/cart">Su carromato</a>
-{{else}}
-<a href="/auth/login">Inisie Sesión</a>
-<a href="/auth/signup">Regístrese Parcero</a>
-<a href="/catalog">Sobre joyias</a>
-<a href="/about">Sobre nosotras</a>
-{{/if}}
+
+<div class="card-body">
+  <h5 class="card-title">Nuestros bellos productos</h5>
+  <p class="card-text">Lo mas de lo mas</p>
+  <a href="/catalog" class="btn btn-primary">JOYIAS</a>
+</div>
+
+</div>

@@ -6,13 +6,13 @@ module.exports = [
 },
   {
     name: "La Usurpadora",
-    description: "TE VEO DERROTADO ANTES DE PRESENTAR LA BATALLA CARLOS DANIEL",
+    description: "Te veo derrotado antes de presentar la batalla Carlos Daniel",
     price: 15,
     image: "http://res.cloudinary.com/dhxxqnbqa/image/upload/v1524502435/Captura_de_pantalla_de_2018-04-23_17-05-47.png"
   },
   {
     name: "Rubi",
-    description: "NUNCA TE VAYAS A DORMIR ENOJADA... QUÉDATE DESPIERTA Y PLANEA TU VENGANZA",
+    description: "Nunca te vayas a dormir enojada... Quédate despierta y planea tu venganza",
     price: 15,
     image: "http://res.cloudinary.com/dhxxqnbqa/image/upload/v1524502435/Captura_de_pantalla_de_2018-04-23_17-11-34.png"
   },

@@ -1,36 +1,32 @@
-// document.addEventListener('DOMContentLoaded', () => {
-
-//   function getTotalPrice() {
-//     var quantity = document.getElementsById("quantity")[0].value;
-    
-//     for(var i = 0; i < quantity.length; i++ ) {
-//       var unitPrice = 15;
-//       var totalPrice = document.getElementsByClassName("total-price")[0];
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      console.log("IronGenerator JS imported successfully!");
+      console.log(window.places);
+      const places = window.places;
   
-//       totalPrice.setAttribute("value", unitPrice * quantity);
-//       totalPrice.innerHTML = unitPrice * quantity;
-//     }
+       const centerMap = {
+         lat: 25.1533,
+         lng: -108.1732
+      };
   
-//     var totalPrices = document.getElementsByClassName("total-price");
-//     var total = 0;
-//     for(var j = 0; j < totalPrices.length; j++) {
-//       total += parseInt(totalPrices[j].getAttribute("value"));
-//     }
-    
-//     document.getElementById("result").innerHTML = total;
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: centerMap
+      });
   
-//   }
-
-//   window.onload = function(){
-//     var calculatePriceButton = document.getElementById('calc-prices-button');
-//     var createItemButton = document.getElementById('new-item-create');
-//     var deleteButtons = document.getElementsByClassName('btn-delete');
+      places.forEach(place => {
+        console.log(place);
+        const pin = new google.maps.Marker({
+          position: {
+            lat: place.location.coordinates[0],
+            lng: place.location.coordinates[1]
+          },
+          map: map,
+          title: place.name
+        });
+      });
+    },
+    false
+  );
   
-//     calculatePriceButton.onclick = getTotalPrice;
-//     //createItemButton.onclick = createNewItem;
-  
-//     for(var i = 0; i<deleteButtons.length ; i++){
-//       deleteButtons[i].onclick = deleteItem;
-//     }
-
-// }}, false);

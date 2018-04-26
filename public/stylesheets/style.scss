@@ -30,9 +30,34 @@ a {
   background-color: pink,
 } 
 
-.pasion {
-  height: 500px;
-  width: 100%;
+.hero-image {
+  /* The image used */
+  background-image: url("http://1.bp.blogspot.com/--ztgz9ujnMg/VkIJeqwffOI/AAAAAAADyaA/oMF6b-E4uyQ/s1600/caballos-salvajes-pintados-cuerpo-completo_2.jpg");
+  /* Set a specific height */
+  height: 50%;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* Place text in the middle of the image */
+.hero-text {
   text-align: center;
-  padding-top: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 18rem;
+}
+
+.navbar{
+  padding: 60px;
 }

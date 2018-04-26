@@ -3,14 +3,15 @@
 
 {{#if user}}
 
-<form action="">
+<form action="post">
     <input type="text" name= "numtarjeta" placeholder="Su numero de tarjetica">
     <br>
     <input type="text" name= "nombretitular" placeholder="Nombre del titular">
     <br>
-    <input type="text" name= "CVV" placeholder="Los 3 numeros magicos">  
+    <input type="text" name= "CVV" placeholder="Los 3 numeros magicos"> 
+    
 </form>
-<a href="/buy/{{user.id}}">Ya quiero pagarle wey</a>
+<a href="/buy/{{user.id}}">Ya quiero pagarle wey</a> 
 
 {{/if}}
 <a href="/cart">Me arrepentí</a>

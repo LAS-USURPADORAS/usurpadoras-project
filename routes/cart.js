@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const Product = require("../models/Product");
@@ -84,8 +85,8 @@ console.log(uzuario)
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'pepe.ironhack@gmail.com',
-      pass: 'pepe1234Ironhack' 
+      user: process.env.GMAILUSER,
+      pass: process.env.GMAILPASS
     }
 });
 
